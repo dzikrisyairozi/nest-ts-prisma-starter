@@ -1,55 +1,118 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+<div align="center">
+  <img src="https://nestjs.com/img/logo-small.svg" width="120" alt="NestJS Logo" />
+  
+  <h1>NestJS TypeScript Prisma Starter</h1>
+  
+  <p>🚀 A production-ready starter template with NestJS, TypeScript, Prisma, and comprehensive development tools</p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+  <p>
+    <a href="https://github.com/dzikrisyairozi/nest-ts-prisma-starter/actions/workflows/ci.yml">
+    </a>
+    <a href="https://github.com/dzikrisyairozi/nest-ts-prisma-starter/blob/main/LICENSE">
+      <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License" />
+    </a>
+    <a href="https://nodejs.org">
+      <img src="https://img.shields.io/badge/node-%3E%3D18-brightgreen.svg" alt="Node.js Version" />
+    </a>
+    <a href="https://www.typescriptlang.org">
+      <img src="https://img.shields.io/badge/typescript-5.x-blue.svg" alt="TypeScript" />
+    </a>
+    <a href="https://nestjs.com">
+      <img src="https://img.shields.io/badge/nestjs-11.x-red.svg" alt="NestJS" />
+    </a>
+    <a href="https://www.prisma.io">
+      <img src="https://img.shields.io/badge/prisma-5.x-brightgreen.svg" alt="Prisma" />
+    </a>
+    <a href="https://pnpm.io">
+      <img src="https://img.shields.io/badge/pnpm-8.x-orange.svg" alt="pnpm" />
+    </a>
+  </p>
+</div>
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+A production-ready [NestJS](https://github.com/nestjs/nest) starter template with TypeScript, Prisma, and comprehensive development tools. Built for modern web applications with best practices, automated quality checks, and complete CI/CD pipeline.
 
-## Description
+## ✨ Features
 
-A comprehensive [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository with Prisma, enhanced with a complete development environment including:
-
+- 🚀 **NestJS** - Progressive Node.js framework
+- 🔷 **TypeScript** - Type-safe development
+- 🗄️ **Prisma** - Modern database toolkit with PostgreSQL/MySQL/SQLite support
+- 📚 **Swagger/OpenAPI** - Auto-generated API documentation
 - 🎨 **Prettier** - Code formatting
 - 🔍 **ESLint** - Code linting with TypeScript support
 - 🐕 **Husky** - Git hooks for automated quality checks
 - 📝 **Commitlint** - Conventional commit message linting
 - 🚀 **Lint-staged** - Run linters on staged files
-- 🔧 **Pre-configured scripts** - Ready-to-use development workflows
+- ⚡ **pnpm** - Fast, disk space efficient package manager
+- 🔧 **VSCode** - Pre-configured settings and extensions
+- 🧪 **Jest** - Testing framework with E2E tests
+- 🔄 **GitHub Actions** - Comprehensive CI/CD pipeline
+- 🐳 **Docker** - Container support
 
-## Project setup
+## 🚀 Quick Start
 
-```bash
-$ pnpm install
-```
+### Prerequisites
 
-## Compile and run the project
+- **Node.js** (v18 or higher)
+- **pnpm** (v8 or higher)
+- **Database** (PostgreSQL/MySQL/SQLite)
 
-```bash
-# development
-$ pnpm run start
+### Installation
 
-# watch mode
-$ pnpm run start:dev
+1. **Clone the repository**:
 
-# production mode
-$ pnpm run start:prod
-```
+   ```bash
+   git clone https://github.com/dzikrisyairozi/nest-ts-prisma-starter.git
+   cd nest-ts-prisma-starter
+   ```
+
+2. **Install dependencies**:
+
+   ```bash
+   pnpm install
+   ```
+
+3. **Set up environment**:
+
+   ```bash
+   cp env.example .env
+   # Edit .env with your database configuration
+   ```
+
+4. **Set up database**:
+
+   ```bash
+   # Generate Prisma client
+   pnpm run db:generate
+
+   # Push schema to database
+   pnpm run db:push
+
+   # Seed with example data (optional)
+   pnpm run db:seed
+   ```
+
+5. **Start development**:
+
+   ```bash
+   # Development mode with hot reload
+   pnpm run start:dev
+   ```
+
+6. **Access the application**:
+   - **API**: http://localhost:3000
+   - **Swagger UI**: http://localhost:3000/api
+
+### Additional Commands
+
+````bash
+# Production build
+pnpm run build
+
+# Production mode
+pnpm run start:prod
+
+# Development mode
+pnpm run start:dev
 
 ## Run tests
 
@@ -62,7 +125,7 @@ $ pnpm run test:e2e
 
 # test coverage
 $ pnpm run test:cov
-```
+````
 
 ## Database (Prisma)
 
@@ -336,12 +399,34 @@ Check out a few resources that may come in handy when working with NestJS:
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
-## Stay in touch
+## 🤝 Contributing
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details on:
 
-## License
+- 🐛 Reporting bugs
+- 💡 Suggesting enhancements
+- 🔀 Submitting pull requests
+- 📝 Improving documentation
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+### Contributors
+
+Thanks to all the amazing contributors who help make this project better! 🙏
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🆘 Support & Contact
+
+- **Author**: [Dzikri Syairozi](https://github.com/dzikrisyairozi)
+- **Email**: dzikrisyairozi@gmail.com
+- **Issues**: [GitHub Issues](https://github.com/dzikrisyairozi/nest-ts-prisma-starter/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/dzikrisyairozi/nest-ts-prisma-starter/discussions)
+
+## ⭐ Show Your Support
+
+If this project helped you, please give it a ⭐! It helps others discover this project.
+
+---
+
+**Built with ❤️ by [Dzikri Syairozi](https://github.com/dzikrisyairozi)**
