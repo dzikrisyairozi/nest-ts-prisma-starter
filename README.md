@@ -1,1 +1,1 @@
-# nest-be-starter
+# nest-ts-prisma-starter
