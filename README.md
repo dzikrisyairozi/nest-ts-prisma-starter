@@ -23,7 +23,14 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+A comprehensive [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository with Prisma, enhanced with a complete development environment including:
+
+- 🎨 **Prettier** - Code formatting
+- 🔍 **ESLint** - Code linting with TypeScript support
+- 🐕 **Husky** - Git hooks for automated quality checks
+- 📝 **Commitlint** - Conventional commit message linting
+- 🚀 **Lint-staged** - Run linters on staged files
+- 🔧 **Pre-configured scripts** - Ready-to-use development workflows
 
 ## Project setup
 
@@ -55,6 +62,70 @@ $ pnpm run test:e2e
 
 # test coverage
 $ pnpm run test:cov
+```
+
+## Development Tools
+
+### Code Quality & Formatting
+
+```bash
+# Format code with Prettier
+$ pnpm run format
+
+# Check formatting without fixing
+$ pnpm run format:check
+
+# Lint and fix code with ESLint
+$ pnpm run lint
+
+# Check linting without fixing
+$ pnpm run lint:check
+
+# Type checking
+$ pnpm run type-check
+```
+
+### Git Hooks (Husky)
+
+This project includes several automated git hooks:
+
+- **commit-msg**: Validates commit messages using commitlint
+- **pre-commit**: Runs lint-staged (formatting and linting on staged files)
+- **pre-push**: Runs type checking, linting, and tests before pushing
+- **post-merge**: Automatically installs dependencies if package files changed
+
+### Commit Message Convention
+
+This project follows the [Conventional Commits](https://www.conventionalcommits.org/) specification:
+
+```
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+**Types:**
+
+- `feat`: A new feature
+- `fix`: A bug fix
+- `docs`: Documentation only changes
+- `style`: Changes that do not affect the meaning of the code
+- `refactor`: A code change that neither fixes a bug nor adds a feature
+- `test`: Adding missing tests or correcting existing tests
+- `chore`: Changes to the build process or auxiliary tools
+- `perf`: A code change that improves performance
+- `ci`: Changes to CI configuration files and scripts
+- `build`: Changes that affect the build system or external dependencies
+- `revert`: Reverts a previous commit
+
+**Examples:**
+
+```bash
+feat: add user authentication
+fix: resolve memory leak in data processing
+docs: update API documentation
 ```
 
 ## Deployment
