@@ -21,7 +21,11 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "prepare": "husky",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "docker:build": "docker build -t nest-ts-prisma-starter .",
+    "docker:run": "docker run -p 3000:3000 nest-ts-prisma-starter",
+    "ci": "pnpm run type-check && pnpm run lint:check && pnpm run format:check && pnpm run test && pnpm run build",
+    "release": "standard-version"
   },
   "dependencies": {
     "@nestjs/common": "^11.0.1",
