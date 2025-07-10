@@ -132,20 +132,15 @@ docs: update API documentation
 
 This project includes a comprehensive CI/CD pipeline using GitHub Actions:
 
-### 🔄 **Continuous Integration** (.github/workflows/ci.yml)
+### 🔄 **Single CI/CD Pipeline** (.github/workflows/ci.yml)
 
 - **Triggers**: Push to main branch, Pull requests
+- **All-in-One**: Quality checks, testing, security, build, and deploy in single job
 - **Quality Checks**: Type checking, linting, formatting validation
 - **Testing**: Unit tests, E2E tests, coverage reports
 - **Security**: Dependency audit, CodeQL analysis
 - **Build**: Application build and artifact upload
 - **Deploy**: Staging and production deployments
-
-### 🔍 **Pull Request Checks** (.github/workflows/pr-checks.yml)
-
-- **Fast Feedback**: Quick quality checks on PRs
-- **Automated Comments**: PR status updates
-- **Build Verification**: Ensures changes don't break build
 
 ### 🚀 **Release Management** (.github/workflows/release.yml)
 
@@ -156,8 +151,8 @@ This project includes a comprehensive CI/CD pipeline using GitHub Actions:
 
 ### 🤖 **Dependency Management** (.github/dependabot.yml)
 
-- **Weekly Updates**: Automated dependency updates
-- **Grouped PRs**: Related updates grouped together
+- **Weekly Updates**: Single PR per week with all updates
+- **Comprehensive**: All dependencies updated together
 - **Security Updates**: Automatic security patches
 
 ### 🛡️ **Security Features**
