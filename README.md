@@ -64,6 +64,76 @@ $ pnpm run test:e2e
 $ pnpm run test:cov
 ```
 
+## Database (Prisma)
+
+This starter includes a complete Prisma setup with PostgreSQL as the default database. You can easily switch to other databases.
+
+### 🗄️ **Database Setup**
+
+1. **Create a database** (PostgreSQL, MySQL, or SQLite)
+2. **Copy environment file**:
+   ```bash
+   cp .env.example .env
+   ```
+3. **Update DATABASE_URL** in `.env`:
+
+   ```bash
+   # PostgreSQL (recommended)
+   DATABASE_URL="postgresql://username:password@localhost:5432/nest_starter?schema=public"
+
+   # MySQL
+   DATABASE_URL="mysql://username:password@localhost:3306/nest_starter"
+
+   # SQLite (for development)
+   DATABASE_URL="file:./dev.db"
+   ```
+
+### 🚀 **Prisma Commands**
+
+```bash
+# Generate Prisma client
+$ pnpm run db:generate
+
+# Push schema changes to database (for prototyping)
+$ pnpm run db:push
+
+# Create and run migrations (for production)
+$ pnpm run db:migrate
+
+# Open Prisma Studio (database GUI)
+$ pnpm run db:studio
+
+# Seed database with example data
+$ pnpm run db:seed
+
+# Reset database (⚠️ deletes all data)
+$ pnpm run db:reset
+```
+
+### 📋 **Example Models**
+
+The starter includes example `User` and `Post` models with relationships:
+
+```typescript
+// Example usage in a service
+async findUsers() {
+  return this.prisma.user.findMany({
+    include: {
+      posts: true,
+    },
+  });
+}
+```
+
+See `src/users/users.service.ts` for complete CRUD examples.
+
+### 🔧 **Customizing the Schema**
+
+1. **Edit** `prisma/schema.prisma`
+2. **Add your models** (follow the examples)
+3. **Generate client**: `pnpm run db:generate`
+4. **Create migration**: `pnpm run db:migrate`
+
 ## Development Tools
 
 ### Code Quality & Formatting
