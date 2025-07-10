@@ -134,6 +134,73 @@ See `src/users/users.service.ts` for complete CRUD examples.
 3. **Generate client**: `pnpm run db:generate`
 4. **Create migration**: `pnpm run db:migrate`
 
+## API Documentation (Swagger/OpenAPI)
+
+This starter includes a comprehensive Swagger OpenAPI setup for automatic API documentation generation.
+
+### 📚 **Quick Access**
+
+- **Swagger UI**: http://localhost:3000/api (when running locally)
+- **OpenAPI JSON**: http://localhost:3000/api-json
+
+### ✨ **Features**
+
+- 🔄 **Automatic Documentation**: All endpoints are automatically documented
+- 🖥️ **Interactive UI**: Test APIs directly from the browser
+- 🔐 **Authentication Support**: JWT Bearer token and API Key authentication
+- 📝 **Response Examples**: Comprehensive examples for all responses
+- ✅ **Validation Integration**: DTOs with validation automatically documented
+- 🌍 **Multi-Environment**: Adapts to development, staging, and production
+
+### 🚀 **Example Usage**
+
+```typescript
+// Controller with Swagger decorators
+@ApiTags('Users')
+@ApiBearerAuth('JWT-auth')
+@Controller('users')
+export class UsersController {
+  @Post()
+  @ApiOperation({ summary: 'Create a new user' })
+  @ApiCreatedResponse({ type: UserResponseDto })
+  create(@Body() createUserDto: CreateUserDto) {
+    return this.usersService.create(createUserDto);
+  }
+}
+
+// DTO with validation and documentation
+export class CreateUserDto {
+  @ApiProperty({
+    description: 'User email address',
+    example: 'dzikri@syairozi.com',
+    format: 'email',
+  })
+  @IsEmail()
+  email: string;
+
+  @ApiProperty({
+    description: 'User full name',
+    example: 'Dzikri Syairozi',
+    minLength: 2,
+    maxLength: 100,
+  })
+  @IsString()
+  @MinLength(2)
+  @MaxLength(100)
+  name: string;
+}
+```
+
+### 🧪 **Try It Out**
+
+1. Start the application: `pnpm run start:dev`
+2. Open http://localhost:3000/api in your browser
+3. Explore the Users API endpoints
+4. Click "Authorize" to test protected endpoints
+5. Try the example requests with provided data
+
+For detailed documentation, examples, and customization guide, see [docs/SWAGGER.md](docs/SWAGGER.md).
+
 ## Development Tools
 
 ### Code Quality & Formatting
