@@ -55,6 +55,9 @@ jobs:
             pnpm install --lockfile-only
           fi
 
+      - name: Generate Prisma Client
+        run: pnpm run db:generate
+
       - name: Type checking
         run: pnpm run type-check
 
