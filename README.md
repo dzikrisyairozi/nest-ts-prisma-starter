@@ -128,6 +128,52 @@ fix: resolve memory leak in data processing
 docs: update API documentation
 ```
 
+## CI/CD Pipeline
+
+This project includes a comprehensive CI/CD pipeline using GitHub Actions:
+
+### 🔄 **Continuous Integration** (.github/workflows/ci.yml)
+
+- **Triggers**: Push to main branch, Pull requests
+- **Quality Checks**: Type checking, linting, formatting validation
+- **Testing**: Unit tests, E2E tests, coverage reports
+- **Security**: Dependency audit, CodeQL analysis
+- **Build**: Application build and artifact upload
+- **Deploy**: Staging and production deployments
+
+### 🔍 **Pull Request Checks** (.github/workflows/pr-checks.yml)
+
+- **Fast Feedback**: Quick quality checks on PRs
+- **Automated Comments**: PR status updates
+- **Build Verification**: Ensures changes don't break build
+
+### 🚀 **Release Management** (.github/workflows/release.yml)
+
+- **Triggers**: Git tags (v\*)
+- **Automated Releases**: GitHub releases with changelogs
+- **Docker Images**: Container builds for deployment
+- **Production Deploy**: Automatic production deployment
+
+### 🤖 **Dependency Management** (.github/dependabot.yml)
+
+- **Weekly Updates**: Automated dependency updates
+- **Grouped PRs**: Related updates grouped together
+- **Security Updates**: Automatic security patches
+
+### 🛡️ **Security Features**
+
+- CodeQL security scanning
+- Dependency vulnerability checks
+- Branch protection rules
+- Environment-based deployments with approvals
+
+### 📊 **Monitoring & Notifications**
+
+- Test coverage reports (Codecov integration)
+- Slack notifications for deployments
+- Build status badges
+- Performance tracking
+
 ## Deployment
 
 When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
