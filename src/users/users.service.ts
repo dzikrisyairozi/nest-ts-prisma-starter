@@ -56,7 +56,7 @@ export class UsersService {
   }
 
   async findOne(id: number): Promise<UserResponseDto> {
-    const user = this.users.find(u => u.id === id);
+    const user = this.users.find((u) => u.id === id);
     if (!user) {
       throw new NotFoundException(`User with ID ${id} not found`);
     }
@@ -67,7 +67,7 @@ export class UsersService {
     id: number,
     updateUserDto: UpdateUserDto,
   ): Promise<UserResponseDto> {
-    const userIndex = this.users.findIndex(u => u.id === id);
+    const userIndex = this.users.findIndex((u) => u.id === id);
     if (userIndex === -1) {
       throw new NotFoundException(`User with ID ${id} not found`);
     }
@@ -82,7 +82,7 @@ export class UsersService {
   }
 
   async remove(id: number) {
-    const userIndex = this.users.findIndex(u => u.id === id);
+    const userIndex = this.users.findIndex((u) => u.id === id);
     if (userIndex === -1) {
       throw new NotFoundException(`User with ID ${id} not found`);
     }
