@@ -257,7 +257,7 @@ export class CreateUserDto {
 ### 🧪 **Try It Out**
 
 1. Start the application: `pnpm run start:dev`
-2. Open http://localhost:3000/api in your browser
+2. Open http://localhost:3000/docs in your browser
 3. Explore the Users API endpoints
 4. Click "Authorize" to test protected endpoints
 5. Try the example requests with provided data
